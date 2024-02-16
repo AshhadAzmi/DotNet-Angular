@@ -9,7 +9,7 @@ import { MembersService } from 'src/app/_services/members.service';
 @Component({
   selector: 'app-members-detail',
   templateUrl: './members-detail.component.html',
-  styleUrl: './members-detail.component.css',
+  styleUrls: ['./members-detail.component.css'],
   standalone: true,
 
   imports: [

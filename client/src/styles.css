@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 /* styles.css */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
+/* 
 .tab-panel {
     border: 1px solid #ddd;
     padding: 10px;
@@ -46,7 +46,7 @@
     border: 0;
     border-top: 1px solid #eee;
     padding: 15px 0;
-  }
+  } */
 
   .gallery {
     height: 600px;
