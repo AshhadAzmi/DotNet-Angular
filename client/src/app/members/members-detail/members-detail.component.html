@@ -5,6 +5,10 @@
                 class="card-img-top img-thumbnail">
             <div class="card-body">
                 <div>
+                    <strong class="text-muted">Gender:</strong>
+                    <p class="text-light">{{member.gender}}</p>
+                </div>
+                <div>
                     <strong class="text-muted">Location:</strong>
                     <p class="text-light">{{member.city}}, {{member.country}}</p>
                 </div>
@@ -14,11 +18,11 @@
                 </div>
                 <div>
                     <strong class="text-muted">Last Active:</strong>
-                    <p class="text-light">{{member.lastActive}}</p>
+                    <p class="text-light">{{member.lastActive + 'Z' | timeago}}</p>
                 </div>
                 <div>
                     <strong class="text-muted">Member Since:</strong>
-                    <p class="text-light">{{member.created}}</p>
+                    <p class="text-light">{{member.created | date: 'dd MMM yyyy'}}</p>
                 </div>
             </div>
             <div class="card-footer bg-dark">
