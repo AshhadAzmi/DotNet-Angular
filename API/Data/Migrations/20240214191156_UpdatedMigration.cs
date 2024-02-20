@@ -11,7 +11,7 @@ namespace API.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.RenameColumn(
-                name: "Intrests",
+                name: "Interests",
                 table: "Users",
                 newName: "Interests");
         }
