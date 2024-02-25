@@ -4,6 +4,9 @@
             <img src="{{member.photoUrl || './assets/user.png'}}" alt="{{member.knownAs}}"
                 class="card-img-top img-thumbnail">
             <div class="card-body">
+                <div class="mb-2" *ngIf="(presenceService.onlineUsers$ | async)?.includes(member.userName)">
+                    <i class="class fa fa-user-circle text-success">Online Now</i>
+                </div>
                 <div>
                     <strong class="text-muted">Gender:</strong>
                     <p class="text-light">{{member.gender}}</p>
@@ -18,7 +21,7 @@
                 </div>
                 <div>
                     <strong class="text-muted">Last Active:</strong>
-                    <p class="text-light">{{member.lastActive + 'Z' | timeago}}</p>
+                    <p class="text-light">{{member.lastActive | timeago}}</p>
                 </div>
                 <div>
                     <strong class="text-muted">Member Since:</strong>
@@ -49,7 +52,7 @@
                 <gallery *ngIf="photoTab.active" [items]="images" class="gallery"></gallery>
             </tab>
             <tab heading="Messages" (selectTab)="onTabActivated($event)">
-                <app-member-messages [username]="member.userName" [messages]="messages"></app-member-messages>
+                <app-member-messages  [username]="member.userName"></app-member-messages>
             </tab>
         </tabset>
     </div>
